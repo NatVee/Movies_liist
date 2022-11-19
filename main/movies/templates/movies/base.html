@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="{% static 'movies/css/styles.css' %}">
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+</head>
+<body>
+    <div class="hd">
+        <h1>---&nbsp&nbsp&nbspMovie List&nbsp&nbsp&nbsp---<h1>
+    </div>
+    <div class="tb">
+      <table>
+          <thead>
+            <tr>
+                <td>Title</td>
+                <td>Year</td>
+                <td>Info</td>
+                <td>Action</td>
+            </tr>
+          </thead>
+          <tbody>
+                <tr>
+                <form>
+                    <td><input type="text" name="title_data"></td>
+                    <td><input type='text' name="year_data"></td>
+
+                    <td></td>
+                    <td><input type="submit" value="+"></td>
+                </form>
+                </tr>
+            {% for p in posts %}
+            <tr>
+                <form>
+                <td>{{p.title}}</td>
+                <td>{{p.year}}</td>
+                <td><a target="_blank" href="https://www.kinopoisk.ru/index.php?kp_query={{p.title}}+{{p.year}}">See</a></td>
+                     <td>
+                         <input type="hidden" name="del" value="{{p.id}}">
+                         <input type="submit" value="-">
+                     </td>
+                 </form>
+            </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+    </div>
+</body>
+</html>

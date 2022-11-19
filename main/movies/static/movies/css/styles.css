@@ -1,0 +1,49 @@
+*{
+    text-align: center;
+    border-color: black;
+    background: radial-gradient(white, grey);
+    font-weight: 500;
+}
+
+table{
+    block-align: center;
+    width: 80%;
+    height: 100%;
+    margin-left: 12rem;
+    margin-right: 10rem;
+    background: radial-gradient(white, black);
+}
+
+td{
+    background: radial-gradient(white, grey);
+    height: 2rem;
+}
+
+a:link{
+    color: black;
+    width: 100rem;
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+    width: 100rem;
+    text-decoration: none;
+
+}
+
+input{
+    background: grey;
+}
+
+div.hd{
+    font-size: 15px;
+    background: grey;
+}
+
+form{
+    height: 100%;
+    width: 100%;
+    background: grey;
+}
+
